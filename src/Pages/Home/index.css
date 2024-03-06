@@ -1,0 +1,210 @@
+.exp{
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(Assets/exp_bg.jpg);
+    display: grid;
+    place-items: center;
+}
+.exp_con{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.exp_nav{
+    height: 55px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.696);
+    display: grid;
+    color: aquamarine;
+    border-bottom: solid 1px aquamarine;
+}
+.exp_nav_con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.exp_nav_con div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.exp_nav_con img{
+    width: 35px;
+    border-radius: 100%;
+    border: solid 2px aquamarine;
+}
+.exp_nav_con button{
+    background-color: black;
+    color: aquamarine;
+    border: solid 2px white;
+    padding: 5px;
+    box-shadow: 2px 2px 1px aquamarine;
+    cursor: pointer;
+}
+.exp_nav h1{
+    font-size: 20px;
+    color: aquamarine;
+    text-transform: uppercase;
+}
+.financials{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    gap: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.fv{
+    width: 40%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color:aqua;
+    display:flex;
+    flex-direction: column;
+    padding:20px 40px;
+    gap:30px;
+}
+.fv p{
+    font-size: 18px;
+}
+.add_transaction{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.add_transaction input{
+    background-color: rgba(127, 255, 212, 0);
+    border: none;
+    border-bottom: solid 3px white;
+    padding: 3px;
+    outline: none;
+    font-size: 14px;
+    color: yellow;
+}
+.add_transaction input:hover{
+    border-bottom: solid 3px aqua;
+}
+.add_transaction input::placeholder{
+    color: white;
+    letter-spacing: 2px;
+}
+.add_transaction div{
+    display: flex;
+    gap: 10px;
+}
+.amount{
+    font-size: 35px;
+}
+.add_transaction button{
+    height: 35px;
+    width: 150px;
+    background-color: black;
+    color: aqua;
+    border: solid 2px white;
+    box-shadow: 2px 2px 1px aqua;
+    cursor: pointer;
+}
+.add_transaction button:hover,.exp_nav_con button:hover{
+    box-shadow: 2px 2px 1px yellowgreen;
+    color: rgb(53, 247, 57);
+}
+#sp{
+    font-size: 20px;
+}
+.history{
+    width: 40%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color:aqua;
+    gap: 20px;
+    overflow: scroll;
+
+}
+.history::-webkit-scrollbar{
+    display: none;
+}
+.eb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.eb p{
+    font-size: 15px;
+    color: greenyellow;
+}
+.history_con{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media(max-width:450px){
+    .exp{
+        padding-bottom: 20px;
+    }
+    .exp_nav_con{
+        padding: 0 10px;
+    }
+    .exp_nav_con div{
+        gap: 7px;
+        font-size: 13px;
+    }
+    .exp_nav_con img{
+        width: 25px;
+    }
+    .exp_nav_con button{
+        padding: 4px;
+        font-size: 11px;
+    }
+    .exp_nav h1{
+        font-size: 13px;
+    }
+    .financials{
+        flex-direction: column;
+        
+        min-height: 900px;
+        gap: 40px;
+    }
+    .fv{
+        width: 90%;
+        padding:20px 40px;
+        gap:30px;
+    }
+    .fv p{
+        font-size: 16px;
+    }
+    .add_transaction input{
+        padding: 3px;
+        font-size: 12px;
+    }
+    .add_transaction button{
+        height: 25px;
+        width: 130px;
+        font-size: 12px;
+    }
+    #sp{
+        font-size: 17px;
+    }
+    
+.amount{
+    font-size: 30px;
+}
+    .history{
+        width: 90%;
+    }
+    .eb p{
+        font-size: 10px;
+        color: greenyellow;
+    }
+    .history_con{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
