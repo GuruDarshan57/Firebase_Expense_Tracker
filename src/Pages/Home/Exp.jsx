@@ -48,17 +48,19 @@ const Exp = () => {
                     <div className="exp_nav_con">
                         <h1>Expense Tracker</h1>
                         <div>
-                            <img src={u_img} alt="" />
-                            <span>{u_name}</span>
+                            <div id="user">
+                                <img src={u_img} alt="" />
+                                <span>{u_name}</span>
+                            </div>
                             <button onClick={sign_out}>Sign Out</button>
                         </div>
                     </div>
                 </div>
                 <div className="financials">
                     <div className="fv">
-                        <p>Balance : <span className='amount'>₹ {transactionTotals.balance}</span></p>
-                        <p style={{ color: "red" }}>Expense : <span className='amount'>₹ {transactionTotals.expenses}</span></p>
-                        <p id='sp' style={{ color: "yellowgreen" }}> Income  : <span className='amount'>₹ {transactionTotals.income}</span></p>
+                        <p>Balance : <span className='amount'>{transactionTotals.balance < 0 ? "-" : ""}₹{transactionTotals.balance < 0 ? -transactionTotals.balance : transactionTotals.balance}</span></p>
+                        <p style={{ color: "red" }}>Expense : <span className='amount'> ₹{transactionTotals.expenses}</span></p>
+                        <p id='sp' style={{ color: "yellowgreen" }}> Income  : <span className='amount'>₹{transactionTotals.income}</span></p>
                         <div className='add_transaction'>
                             <h2>ADD TRANSACTION</h2>
                             <input type="text" placeholder='Description' value={des} onChange={(e) => { setDes(e.target.value) }} />

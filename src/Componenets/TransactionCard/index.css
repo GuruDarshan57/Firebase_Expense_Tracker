@@ -41,9 +41,11 @@
 }
 .c_i{
     color: greenyellow;
+    text-transform: uppercase;
 }
 .c_e{
     color: red;
+    text-transform: uppercase;
 }
 .c_uti{
     display: flex;
